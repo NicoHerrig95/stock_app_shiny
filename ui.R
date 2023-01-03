@@ -12,62 +12,6 @@ dashboardPage(
       boldText = "STOCK SEEKER",
       mainText = "DOW30",
       badgeText = "v1.1"
-    ),
-
-    # Add 'contact us' option
-    dropdownMenu(
-      type = "messages",
-      headerText = strong("Feedback and susggestions"),
-      messageItem(
-        from = "angus@st-andrews.ac.uk",
-        message =  "",
-        icon = icon("envelope"),
-        href = "mailto:angus@st-andrews.ac.uk"
-      ),
-      icon = icon("comment")
-    ),
-
-    # Add share option
-    dropdownMenu(
-      type = "message",
-      icon = icon("share-alt"),
-      headerText = strong("Like it Share it"),
-
-      # Twitter
-      messageItem(
-        from = "Twitter",
-        message = "",
-        icon = icon("twitter"),
-        href = "https://twitter.com/intent/tweet?url=https://nicohrg95.shinyapps.io/stock_seeker/&text=Check%20out%20Stock%20Seeker%20Dow30%20Dashboard"
-      ),
-
-      # Facebook
-      messageItem(
-        from = "Facebook",
-        message = "",
-        icon = icon("facebook"),
-        href = "https://www.facebook.com/sharer/sharer.php?u=https://nicohrg95.shinyapps.io/stock_seeker/"
-      ),
-
-      # LinkedIn
-      messageItem(
-        from = "LinkedIn",
-        message = "",
-        icon = icon("linkedin"),
-        href = "http://www.linkedin.com/shareArticle?mini=true&url=https://nicohrg95.shinyapps.io/stock_seeker/&title=Stock%20Seeker%20Dow30%20Dashboard"
-      )
-    ),
-
-    # Link to github README
-    tags$li(
-      a(
-        strong("ABOUT Stock Seeker"),
-        height = 40,
-        href = "https://github.com/Joseph-Edwards/MT5763_Shiny/blob/main/stock_seeker/Readme.md",
-        title = "",
-        target = "_blank"
-      ),
-      class = "dropdown"
     )
   ),
 
