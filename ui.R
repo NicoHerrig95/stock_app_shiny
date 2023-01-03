@@ -3,10 +3,8 @@
 
 dashboardPage(
   dashboardHeader(title= shinyDashboardLogo( # creating logo of the app
-    theme = "blue_gradient",
-    boldText = "STOCK SEEKER",
-    mainText = "DOW30",
-    badgeText = "v1.1")
+    theme = "onenote",
+    boldText = "STOCK ANALYTICS")
   ),
   # defining menu items of sidebar
   dashboardSidebar(
@@ -39,7 +37,7 @@ dashboardPage(
   dashboardBody(
     # setting design of application
     shinyDashboardThemes(
-      theme = "blue_gradient"
+      theme = "onenote"
     ),
     
     tabItems(
