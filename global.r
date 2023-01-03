@@ -12,12 +12,12 @@ library(zoo)
 library(renv)
 
 # Check if web scraping is legal
-paths_allowed("https://en.wikipedia.org/")
+paths_allowed("https://de.wikipedia.org/wiki/DAX")
 paths_allowed("https://uk.finance.yahoo.com/")
 
 # Ticker Symbols of Dow 30 Companies
 # Scrape Ticker Symbols of Dow30 from Wikipedia
-url <- "https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"
+url <- "https://de.wikipedia.org/wiki/DAX"
 
 # Read the HTML code from website
 webpage <- read_html(url)
@@ -28,12 +28,7 @@ table_wiki <- webpage %>%
 
 # subset and wrangle table of interest
 table_wiki <- as.data.frame(table_wiki[[2]]) %>%
-  select(
-    -Exchange,
-    -`Date added`,
-    -Notes,
-    -`Index weighting`
-  )
+  select(Symbol)
 
 # Create web scraping tool for scraping stock data from yahoo finance
 scraper_get_symbols <- function(tkr, timespan) {
